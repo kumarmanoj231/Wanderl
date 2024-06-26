@@ -1,0 +1,69 @@
+<nav class="navbar navbar-expand-md  bg-body-light border-bottom sticky-top ">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/listings"
+      ><i class="fa-solid fa-globe"></i> <span id="i-name">WanderLust</span>
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link" href="/listings">Explore</a>
+      </div>
+
+      <nav class="navbar-nav ms-auto">
+        <div class="container-fluid">
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2 search-inp"
+              type="search"
+              placeholder="Search destinations"
+              aria-label="Search"
+            />
+            <button class="btn search-btn" type="submit">
+              <i class="fa-solid fa-magnifying-glass"></i>Search
+            </button>
+          </form>
+        </div>
+      </nav>
+
+      <div class="dropdown ms-auto">
+        <button
+          class="btn btn-light dropdown-toggle"
+          type="button"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          <i class="fa-solid fa-user"></i>
+          <% if(currUser) {%>
+          <b>&nbsp;<%= currUser.username.toUpperCase() %></b>
+          <%} %>
+        </button>
+        <ul class="dropdown-menu">
+          <% if(!currUser) {%>
+          <li><a class="dropdown-item" href="/signup">signup</a></li>
+          <li><a class="dropdown-item" href="/login">login</a></li>
+          <% } else{%>
+          <li>
+            <a class="dropdown-item" href="/logout"
+              ><span style="color: red"><b>logout</b></span></a
+            >
+          </li>
+          <%} %>
+        </ul>
+      </div>
+
+      <div class="navbar-nav">
+        <a class="nav-link" href="/listings/new">List Your Place</a>
+      </div>
+    </div>
+  </div>
+</nav>

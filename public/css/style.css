@@ -1,0 +1,164 @@
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+.container {
+  flex: 1;
+}
+
+.navbar {
+  padding-top: 1.5rem ;
+  padding-bottom: 1.5rem ;
+  
+  background-color: #fff;
+}
+.fa-globe {
+  padding: 0.3rem;
+  font-size: 1.2rem;
+  color: #000;
+}
+#i-name {
+  font-weight: bold;
+}
+
+.nav-link {
+  color: #000 !important;
+}
+
+
+
+
+footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  border-top: 1px solid rgba(192, 192, 192, 0.801);
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+.listing-card {
+  border: none !important;
+  margin-bottom: 2rem;
+}
+.card-img-top {
+  border-radius: 1rem !important;
+  width: 100% !important;
+  object-fit: cover !important;
+}
+.card-body {
+  padding: 0 !important;
+}
+.card-text p {
+  font-weight: 400 !important;
+}
+.price {
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
+.listing-link {
+  text-decoration: none;
+}
+
+.card-img-overlay {
+  opacity: 0;
+}
+.card-img-overlay:hover {
+  opacity: 0.2;
+  background-color: #fff;
+}
+.add-btn {
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  background-color: teal;
+}
+
+/* alerts */
+
+.alrt-s {
+  background-color: rgba(18, 235, 18, 0.781) !important;
+  color: #fff !important;
+  font-weight: bold !important;
+}
+
+.alrt-f {
+  background-color: crimson !important;
+  color: #fff !important;
+}
+
+/* map */
+#map {
+  height: 400px;
+  width: 100%;
+}
+
+/* 
+features */
+
+#filters {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.filter {
+  text-align: center;
+  margin-right: 2rem;
+  margin-top: 1rem;
+  opacity: 0.7;
+}
+.filter:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+.filter p {
+  font-size: 0.9rem;
+}
+.tax-info {
+  color: red;
+  font-weight: bold;
+  display: none;
+}
+.tax-toggle {
+  border: 2px solid silver;
+  padding: 1rem;
+  border-radius: 1rem;
+  height: 3.5rem;
+  margin-left: 3rem;
+  display: flex;
+  align-items: center;
+}
+#filters a {
+  text-decoration: none;
+  color: #000000cf;
+}
+
+
+/* search */
+.search-btn {
+  background-color: #fe424d;
+  color: #fff;
+  border-radius: 1.25rem !important;
+}
+.search-btn:hover {
+  background-color: #fe424d;
+  color: #fff;
+}
+
+.search-btn i {
+  display: inline;
+  margin-right: 0.25rem;
+}
+.search-inp {
+  border-radius: 1.25rem !important;
+  font-size: 1rem;
+}

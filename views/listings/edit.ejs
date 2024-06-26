@@ -1,0 +1,143 @@
+<% layout("layouts/boilerplate") -%>
+<body>
+  <div class="row">
+    <div class="col-8 offset-2">
+      <h1>Edit listing</h1>
+
+      <form
+        action="/listings/<%= listing._id %>?_method=PUT"
+        method="POST"
+        novalidate
+        class="needs-validation"
+        enctype="multipart/form-data"
+      >
+        <div class="mb-3">
+          <label for="title" class="form-label"><b>Title</b></label>
+          <input
+            type="text"
+            name="listing[title]"
+            id="title"
+            placeholder="Enter a Catchy title.."
+            class="form-control"
+            value="<%=listing.title %>"
+            required
+          />
+          <div class="invalid-feedback">Title can't be empty!</div>
+        </div>
+
+        <div class="mb-3">
+          <label for="description" class="form-label"><b>Description</b></label>
+          <textarea
+            name="listing[description]"
+            id="description"
+            rows="5"
+            cols="10"
+            class="form-control"
+            required
+          >
+<%= listing.description%></textarea
+          >
+
+          <div class="invalid-feedback">Enter short, non-empty description</div>
+        </div>
+
+        <div class="mb-3">
+          <figure>
+            <figcaption>
+              <label for="image" class="form-label"
+                ><b>Current Image </b></label
+              >
+            </figcaption>
+            <img
+              src="<%=originalImgUrl %>"
+              alt="<%=listing.image.filename %>"
+            />
+          </figure>
+        </div>
+
+        <div class="mb-3">
+          <label for="image" class="form-label"><b>New Image </b></label>
+          <input
+            type="file"
+            name="listing[image]"
+            id="image"
+            class="form-control"
+          />
+        </div>
+
+        <div class="row">
+          <div class="mb-3 col-md-6">
+            <label for="price" class="form-label"><b>Price</b></label>
+            <input
+              type="number"
+              name="listing[price]"
+              id="price"
+              class="form-control"
+              placeholder="20"
+              value="<%=listing.price %>"
+              required
+            />
+            <div class="invalid-feedback">Enter valid price, numbers only</div>
+          </div>
+
+          <div class="mb-3 col-md-6">
+            <label for="country" class="form-label"><b>Country</b></label>
+            <input
+              type="text"
+              name="listing[country]"
+              id="country"
+              placeholder="India"
+              class="form-control"
+              value="<%= listing.country%>"
+              required
+            />
+            <div class="invalid-feedback">Enter valid country name</div>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="location" class="form-label"><b>Location</b></label>
+          <input
+            type="text"
+            name="listing[location]"
+            id="location"
+            placeholder="Jaipur, Rajasthan"
+            class="form-control"
+            value="<%= listing.location %>"
+            required
+          />
+          <div class="invalid-feedback">Enter valid location</div>
+        </div>
+
+        <div class="mb-3">
+          <label for="category" class="form-label"><b> Category </b></label>
+          <select
+            class="form-select"
+            size="4"
+            name="listing[category]"
+            id="category"
+          >
+            <option selected value="other">Other</option>
+            <option value="trending">Trending</option>
+            <option value="rooms">Rooms</option>
+            <option value="cities">cities</option>
+            <option value="mountains">Mountain</option>
+            <option value="castles">castles</option>
+            <option value="pools">pools</option>
+            <option value="camping">camping</option>
+            <option value="farms">farms</option>
+            <option value="arctic">arctic</option>
+            <option value="doms">doms</option>
+            <option value="boats">boats</option>
+          </select>
+        </div>
+
+        <div class="mb-3">
+          <button class="add-btn" style="background-color: purple">
+            <i class="fa-solid fa-pen-nib"></i>&nbsp;Edit listing
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
