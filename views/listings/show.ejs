@@ -6,7 +6,7 @@
     const listing = <%- JSON.stringify(listing) %>;
   </script>
 
-  <div class="row offset-1">
+  <div class="row offset-md-1">
     <div class="mb-2">
       <h3 class="mt-2"><%= listing.title %></h3>
     </div>
@@ -52,8 +52,8 @@
       </form>
     </div>
 
+    <% } %>
     <hr />
-
     <div class="col-11 mb-3">
       <h3>Where you'll be</h3>
 
@@ -90,7 +90,7 @@
       </div>
     </div>
 
-    <% } %> <% } %> <% if(currUser){ %>
+    <% } %> <% if(currUser){ %>
     <hr />
     <h3>Leave a review</h3>
     <div class="col-8 mb-3">
