@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-md  bg-body-light border-bottom sticky-top ">
   <div class="container-fluid">
     <a class="navbar-brand" href="/listings"
-      ><i class="fa-solid fa-globe"></i> <span id="i-name">Sight</span>
+      ><i class="fa-solid fa-person-hiking"></i> <span id="i-name">Sight</span>
     </a>
     <button
       class="navbar-toggler"
@@ -15,11 +15,11 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-        <a class="nav-link" href="/listings">Explore</a>
+      <div class="navbar-nav mt-3">
+        <a class="nav-link" href="/listings"><span id="exp">Explore</span> </a>
       </div>
 
-      <nav class="navbar-nav ms-auto">
+      <nav class="navbar-nav ms-auto mt-3">
         <div class="container-fluid">
           <form class="d-flex" role="search">
             <input
@@ -35,7 +35,7 @@
         </div>
       </nav>
 
-      <div class="dropdown ms-auto">
+      <div class="dropdown ms-auto mt-3">
         <button
           class="btn btn-light dropdown-toggle"
           type="button"
@@ -54,14 +54,14 @@
           <% } else{%>
           <li>
             <a class="dropdown-item" href="/logout"
-              ><span style="color: red"><b>logout</b></span></a
+              ><span style="color: red">logout</span></a
             >
           </li>
           <%} %>
         </ul>
       </div>
 
-      <div class="navbar-nav">
+      <div class="navbar-nav mt-3">
         <a class="nav-link" href="/listings/new">List Your Place</a>
       </div>
     </div>
