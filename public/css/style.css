@@ -8,6 +8,8 @@ body {
   flex-direction: column;
   min-height: 100%;
   font-family: "Poppins", sans-serif;
+  flex-direction: column;
+  height: 100dvh;
 }
 .container {
   flex: 1;
@@ -110,10 +112,9 @@ img {
 }
 
 footer {
-  position: relative;
-  bottom: 0;
-  width: 100%;
+  margin: auto;
   border-top: 1px solid rgba(192, 192, 192, 0.801);
+  width: 100%;
   text-align: center;
 }
 
@@ -157,7 +158,7 @@ footer {
 /* alerts */
 
 .alrt-s {
-  background-color: rgba(18, 235, 18, 0.781) !important;
+  background-color: #000000b9 !important;
   color: #fff !important;
   font-weight: bold !important;
 }
@@ -165,4 +166,21 @@ footer {
 .alrt-f {
   background-color: crimson !important;
   color: #fff !important;
+  font-weight: normal !important;
+}
+
+.review-comment {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+@media screen and (max-width: 600px) {
+  .review-card {
+    border: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .review-card {
+    margin-left: 1rem;
+  }
 }

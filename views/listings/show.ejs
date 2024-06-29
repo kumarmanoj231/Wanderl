@@ -65,9 +65,9 @@
     <% if(!listing.reviews.length == 0){ %>
     <h4>All reviews</h4>
     <% } %> <% for(let review of listing.reviews){ %>
-    <div class="card col-md-5 col-sm-10 mb-3 p-2">
-      <div class="card-body p-2">
-        <h5 class="card-title">
+    <div class="card col-md-5 mb-3 review-card">
+      <div class="card-body">
+        <h5 class="card-title mt-2">
           <small>
             <i class="fa-regular fa-user"></i>
             <%=review.author.username %></small
@@ -77,7 +77,7 @@
           class="starability-result card-text"
           data-rating="<%= review.rating%>"
         ></p>
-        <p class="card-text"><%= review.comment%></p>
+        <p class="card-text review-comment"><%= review.comment%></p>
 
         <form
           action="/listings/<%=listing._id%>/reviews/<%=review._id%>?_method=DELETE"
