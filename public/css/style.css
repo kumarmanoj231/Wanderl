@@ -170,7 +170,7 @@ footer {
 }
 
 .review-comment {
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif !important;
 }
 
 @media screen and (max-width: 600px) {
