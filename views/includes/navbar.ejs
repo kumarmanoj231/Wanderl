@@ -21,12 +21,13 @@
 
       <nav class="navbar-nav ms-auto mt-3">
         <div class="container-fluid">
-          <form class="d-flex" role="search">
+          <form class="d-flex" role="search" method="get" action="/listings/search">
             <input
               class="form-control me-2 search-inp"
               type="search"
               placeholder="Search destinations"
               aria-label="Search"
+              name="listingName"
             />
             <button class="btn search-btn" type="submit">
               <i class="fa-solid fa-magnifying-glass"></i>Search

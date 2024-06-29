@@ -100,3 +100,10 @@ module.exports.destroyListing = async (req, res) => {
   req.flash("success", "Listing deleted!");
   res.redirect("/listings");
 };
+
+module.exports.renderSearch = async (req,res)=>{
+  let {listingName} = req.query;
+  let result = await Listing.find({title : listingName});
+
+  res.render("./listings/search.ejs",{listingName,result});
+};

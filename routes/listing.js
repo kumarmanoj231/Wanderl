@@ -22,9 +22,7 @@ router.route("/").get(wrapAsync(listingController.index)).post(
 
 router.get("/new", isLoggedIn, listingController.renderNewForm);
 
-router.get("/search",(req,res)=>{
-  res.send(req.query);
-})
+router.get("/search",listingController.renderSearch);
 
 router
   .route("/:id")

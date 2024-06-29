@@ -72,7 +72,7 @@ const main = async () => {
 
 main()
   .then(() => {
-    console.log("Connected to DB Wanderlust");
+    console.log("Connected to DB");
   })
   .catch((err) => {
     console.log(err);
