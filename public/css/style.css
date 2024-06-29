@@ -15,6 +15,11 @@ body {
   flex: 1;
 }
 
+.review-comment {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif !important;
+}
+
+
 .navbar {
   padding-top: 1rem;
   padding-bottom: 1.5rem;
@@ -169,9 +174,7 @@ footer {
   font-weight: normal !important;
 }
 
-.review-comment {
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif !important;
-}
+
 
 @media screen and (max-width: 600px) {
   .review-card {
