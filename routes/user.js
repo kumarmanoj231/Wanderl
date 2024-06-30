@@ -24,4 +24,6 @@ router
 
 router.get("/logout", userControlller.logoutFromAccount);
 
+router.get("/profile",userControlller.showUserProfile);
+
 module.exports = router;

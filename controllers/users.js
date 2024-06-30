@@ -1,4 +1,5 @@
 const User = require("../models/user");
+const Listing = require("../models/listing");
 
 module.exports.renderSignupForm = (req, res) => {
   res.render("users/signup.ejs");
@@ -42,4 +43,17 @@ module.exports.logoutFromAccount = (req, res, next) => {
     req.flash("success", "You are logged out now!");
     res.redirect("/listings");
   });
+};
+
+module.exports.showUserProfile = async (req,res)=>{
+  let  user = req.user;
+  if(user){
+    let userId = user._id;
+    let allListings = await Listing.find({owner :userId }).populate('owner');
+    res.render("users/profile.ejs",{user,allListings});
+  }else{
+    res.redirect("/listings");
+  }
+
+ 
 };

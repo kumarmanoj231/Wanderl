@@ -110,4 +110,3 @@ app.use((err, req, res, next) => {
   let { status = 500, message = "some error occured!" } = err;
   res.status(status).render("error.ejs", { message });
 });
-

@@ -1,0 +1,47 @@
+<% layout("layouts/boilerplate") -%>
+<body>
+  <div class="container mt-2">
+    <h3 style="text-decoration: underline; text-align: center;">User Details</h3>
+    <div class="row mt-3 mb-3 offset-2">
+      
+      Username :  &nbsp;<%= user.username%> <br>
+      email : &nbsp;<%= user.email %> <br>
+    
+    </div>
+    <hr>
+    <h4>Listings created by User</h4>
+    
+    <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 pd-auto mt-3">
+      <% for(let listing of allListings){ %>
+      <a href="/listings/<%=listing._id %>" class="listing-link">
+        <div class="card col listing-card">
+          <img
+            src="<%=listing.image.url %>"
+            class="card-img-top"
+            alt="<%=listing.image.filename %>"
+            style="height: 20rem"
+          />
+          <div class="card-img-overlay"></div>
+          <div class="card-body">
+            <p class="card-text">
+              <b><%= listing.title%></b><br />
+              <span class="price"
+                >&#8377;<%= listing.price.toLocaleString("en-IN") %></span
+              >&nbsp;/night
+  
+              <span class="tax-info">+ 18% GST</span>
+            </p>
+          </div>
+        </div>
+      </a>
+  
+      <%} %>
+    </div>
+
+
+
+
+
+
+  </div>
+</body>
