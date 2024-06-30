@@ -101,6 +101,9 @@ app.use("/listings/:id/reviews", reviewRouter);
 app.use("/", userRouter);
 app.use("/", filterRouter);
 
+app.get("/",(req,res)=>{
+  res.render("frontpage.ejs");
+});
 
 app.all("*", (req, res, next) => {
   next(new ExpressError(404, "Page not found!"));

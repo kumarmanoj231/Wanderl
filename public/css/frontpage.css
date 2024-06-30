@@ -1,0 +1,53 @@
+* {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  body {
+    width: 100% !important;
+    height: 100dvh;
+  }
+  .landing-page-box {
+    height: 100dvh !important;
+    width: 100% !important;
+    background-image: linear-gradient(#00000029, #000),
+      url("https://wallpapercave.com/wp/wp8738941.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .head {
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #title {
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    font-weight: bolder;
+    font-size: 12rem;
+    padding-top: 8rem;
+    color: #ccc;
+  }
+  .row {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  .page-para {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 5rem !important;
+    flex-direction: column;
+    color: #fff;
+    font-family: "Teko", sans-serif;
+  }
+  .des{
+    font-family: "Teko", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 1.5rem
+  }
+  .explore {
+    border: 2px solid #fff;
+    padding: 0.5rem 1rem !important;
+    font-size: 2rem;
+  }
