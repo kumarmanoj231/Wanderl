@@ -24,7 +24,7 @@
   #title {
     font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
     font-weight: bolder;
-    font-size: 10rem;
+    font-size: 5rem;
     padding-top: 2rem;
     color: #ccc;
   }
@@ -48,6 +48,27 @@
   }
   .explore {
     border: 2px solid #fff;
-    padding: 0.5rem 1rem !important;
+    padding: 0.2rem 0.5rem !important;
     font-size: 2rem;
+  }
+
+
+  @media screen and (min-width: 700px) {
+    #title{
+      font-size: 10rem;
+    }
+    
+    
+  }
+
+  @media screen and (max-width: 480px) {
+    #title{
+      font-size: 4rem;
+    }
+    #extra{
+      display: none;
+    }
+    .des{
+      font-size: 1.3rem;
+    }
   }
