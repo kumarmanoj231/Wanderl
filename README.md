@@ -22,4 +22,4 @@ Sight is a web application built to assist users in planning their travel. It is
 - **Authentication**: Passport.js, bcrypt.js for password hashing
 - **Framework**: MVC architecture
 
-<a href="https://wanderl.onrender.com/" > project linkd  </a>
+<a href="https://wanderl.onrender.com/" > project link  </a>
