@@ -1,4 +1,4 @@
-# 🌍 Wanderl
+# 🌍 Wanderl / Sight
 
 ### A full-stack travel and accommodation platform built with Node.js, Express, MongoDB, and EJS.
 
